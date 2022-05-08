@@ -1,0 +1,57 @@
+.slider-app {
+    text-align: center;
+}
+.slider-app .slider-box {
+    margin: 100px auto;
+}
+
+.slider-app .slider-content {
+    width: 90%;
+    min-height: 450px;
+    overflow: hidden;
+}
+.slider-app .slider-content .item {
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+}
+.slider-app .slider-content .item .img-box {
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 3px 12px rgb(112, 112, 112);
+    border-radius: 50%;
+}
+.slider-app .slider-content .item .img-box img {
+    object-fit: cover;
+    border-radius: 50%;
+}
+.slider-app .slider-content .item.active-slide {
+    transform: translateX(0);
+    opacity: 1;
+}
+.slider-app .slider-content .item.last-slide {
+    transform: translateX(-100%);
+}
+.slider-app .slider-content .item.next-slide {
+    transform: translateX(100%);
+}
+.slider-app .slider-content .item .content .quote {
+    width: 80%;
+    margin: 0 auto;
+}
+.slider-app button {
+    position: absolute;
+    top: calc((100% - 50px) / 2);
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+.slider-app button {
+    font-size: 2rem;
+    transition: transform 0.2s ease-in-out;
+}
+.slider-app button:focus {
+    box-shadow: none;
+}
+.slider-app button:hover {
+    transform: scale(1.1);
+}
